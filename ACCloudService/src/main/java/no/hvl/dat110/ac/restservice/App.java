@@ -27,7 +27,6 @@ public class App {
 		}
 
 		// objects for data stored in the service
-		
 		accesslog = new AccessLog();
 		accesscode  = new AccessCode();
 		

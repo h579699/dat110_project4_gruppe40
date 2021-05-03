@@ -91,11 +91,11 @@ public class RestClient {
 		// TODO: implement a HTTP GET on the service to get current access code
 		try (Socket s = new Socket(Configuration.host, Configuration.port)) {
 
-			// construct the GET request
+			// constructs the GET request
 			String httpgetrequest = "GET " + codepath + " HTTP/1.1\r\n" + "Accept: application/json\r\n"
 					+ "Host: " + Configuration.host + "\r\n" + "Connection: close\r\n" + "\r\n";
 
-			// send the HTTP request
+			// sends the HTTP request
 			OutputStream output = s.getOutputStream();
 
 			PrintWriter pw = new PrintWriter(output, false);
@@ -103,7 +103,7 @@ public class RestClient {
 			pw.print(httpgetrequest);
 			pw.flush();
 
-			// read the HTTP response
+			// reads the HTTP response
 			InputStream in = s.getInputStream();
 
 			Scanner scan = new Scanner(in);
